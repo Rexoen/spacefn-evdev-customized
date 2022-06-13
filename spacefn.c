@@ -2,6 +2,7 @@
  * spacefn-evdev.c
  * James Laird-Wah (abrasive) 2018
  * This code is in the public domain.
+ * Keymap Modified By Rexoen 2022
  */
 
 #include <libevdev/libevdev.h>
@@ -18,25 +19,57 @@ unsigned int key_map(unsigned int code) {
             exit(0);
 
         case KEY_J:
-            return KEY_LEFT;
-        case KEY_K:
             return KEY_DOWN;
-        case KEY_L:
+        case KEY_K:
             return KEY_UP;
-        case KEY_SEMICOLON:
+        case KEY_L:
             return KEY_RIGHT;
-
-        case KEY_M:
-            return KEY_HOME;
-        case KEY_COMMA:
-            return KEY_PAGEDOWN;
-        case KEY_DOT:
-            return KEY_PAGEUP;
-        case KEY_SLASH:
-            return KEY_END;
-
+        case KEY_H:
+            return KEY_LEFT;
         case KEY_B:
             return KEY_SPACE;
+        case KEY_ESC:
+            return KEY_GRAVE;
+        case KEY_1:
+            return KEY_F1;
+        case KEY_2:
+            return KEY_F2;
+        case KEY_3:
+            return KEY_F3;
+        case KEY_4:
+            return KEY_F4;
+        case KEY_5:
+            return KEY_F5;
+        case KEY_6:
+            return KEY_F6;
+        case KEY_7:
+            return KEY_F7;
+        case KEY_8:
+            return KEY_F8;
+        case KEY_9:
+            return KEY_F9;
+        case KEY_0:
+            return KEY_F10;
+        case KEY_MINUS:
+            return KEY_F11;
+        case KEY_EQUAL:
+            return KEY_F12;
+        case KEY_P:
+            return KEY_F13; // For saving screenshot(flameshot) cause print cannot be redirected.
+        case KEY_COMMA:
+            return KEY_PAUSE; // For toggle clipboard manager(copyq).
+        case KEY_LEFTBRACE:
+            return KEY_HOME;
+        case KEY_RIGHTBRACE:
+            return KEY_END;
+        case KEY_SEMICOLON:
+            return KEY_PAGEUP;
+        case KEY_APOSTROPHE:
+            return KEY_PAGEDOWN;
+        case KEY_DOT:
+            return KEY_INSERT;
+        case KEY_SLASH:
+            return KEY_DELETE;
     }
     return 0;
 }
