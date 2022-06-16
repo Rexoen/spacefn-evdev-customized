@@ -56,19 +56,19 @@ unsigned int key_map(unsigned int code) {
             return KEY_F12;
         case KEY_P:
             return KEY_F13; // For saving screenshot(flameshot) cause print cannot be redirected.
-        case KEY_COMMA:
-            return KEY_PAUSE; // For toggle clipboard manager(copyq).
-        case KEY_LEFTBRACE:
+        case KEY_C:
+            return KEY_F14;
+        case KEY_M:
             return KEY_HOME;
-        case KEY_RIGHTBRACE:
-            return KEY_END;
-        case KEY_SEMICOLON:
-            return KEY_PAGEUP;
-        case KEY_APOSTROPHE:
+        case KEY_COMMA:
             return KEY_PAGEDOWN;
         case KEY_DOT:
-            return KEY_INSERT;
+            return KEY_PAGEUP;
         case KEY_SLASH:
+            return KEY_END;
+       case KEY_LEFTBRACE:
+            return KEY_INSERT;
+        case KEY_RIGHTBRACE:
             return KEY_DELETE;
     }
     return 0;
