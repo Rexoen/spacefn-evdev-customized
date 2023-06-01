@@ -70,6 +70,8 @@ unsigned int key_map(unsigned int code) {
             return KEY_INSERT;
         case KEY_RIGHTBRACE:
             return KEY_DELETE;
+        case KEY_BACKSPACE:
+            return KEY_DELETE;
     }
     return 0;
 }
